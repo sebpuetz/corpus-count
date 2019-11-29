@@ -1,6 +1,6 @@
 [package]
 name = "corpus-count"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["Sebastian Puetz <sebastian.puetz@student.uni-tuebingen.de>"]
 description = "Util to count words and character ngrams in a corpus."
 edition = "2018"

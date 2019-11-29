@@ -35,7 +35,7 @@ fn main() {
         BufWriter::new(f)
     });
     let bracket = !matches.is_present(NO_BRACKET);
-    let filter_first = !matches.is_present(FILTER_FIRST);
+    let filter_first = matches.is_present(FILTER_FIRST);
     let token_min = matches
         .value_of(TOKEN_MIN)
         .map(|v| v.parse::<usize>().expect("Can't parse token min"))
@@ -133,7 +133,7 @@ fn counted_into_sorted(
 fn parse_args() -> ArgMatches<'static> {
     App::new("corpus-count")
         .author("Sebastian Pütz")
-        .version("0.1.0")
+        .version("0.1.1")
         .settings(DEFAULT_CLAP_SETTINGS)
         .arg(
             Arg::with_name(CORPUS)
@@ -145,8 +145,8 @@ fn parse_args() -> ArgMatches<'static> {
         .arg(
             Arg::with_name(TOKEN_COUNTS)
                 .long("token_counts")
-                .short("w")
-                .help("Word count file")
+                .short("t")
+                .help("Token count file")
                 .takes_value(true),
         )
         .arg(

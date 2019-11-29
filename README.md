@@ -9,7 +9,7 @@ Outputs frequency-sorted lists of items.
 ```Bash
 # read from file, write ngram and token counts to files
 $ corpus-count -c /path/to/corpus.txt -n /path/to/ngram_output.txt \
-    -w /path/to/token_output.txt
+    -t /path/to/token_output.txt
 
 # read from file, don't count ngrams and write token counts to stdout
 $ corpus-count -c /path/to/corpus.txt
@@ -21,13 +21,13 @@ $ corpus-count < /path/to/corpus.txt
 # ngrams appearing less than 30 times. ngrams are counted **before** filtering
 # tokens.
 $ corpus-count -c /path/to/corpus.txt -n /path/to/ngram_output.txt \
-    -w /path/to/token_output.txt --token_min 30 --ngram_min 30
+    -t /path/to/token_output.txt --token_min 30 --ngram_min 30
     
 
 # read from file, write ngram and token counts to files, filter out tokens and
 # ngrams appearing less than 30 times. Count ngrams **after** filtering tokens.
 $ corpus-count -c /path/to/corpus.txt -n /path/to/ngram_output.txt \
-    -w /path/to/token_output.txt --token_min 30 --ngram_min 30 --filter_first
+    -t /path/to/token_output.txt --token_min 30 --ngram_min 30 --filter_first
 ``` 
 
 Counting ngrams is determined by giving an argument to the `--ngram_count` or
