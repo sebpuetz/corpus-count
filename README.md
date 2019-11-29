@@ -49,5 +49,5 @@ and `--max_n` flags.
 Rust is required, most easily installed through https://rustup.rs.
 
 ```Bash
-cargo install --git https://github.com/sebpuetz/corpus-count 
+cargo install corpus-count 
 ```
