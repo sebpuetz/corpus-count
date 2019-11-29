@@ -2,9 +2,16 @@
 name = "corpus-count"
 version = "0.1.0"
 authors = ["Sebastian Puetz <sebastian.puetz@student.uni-tuebingen.de>"]
+description = "Util to count words and character ngrams in a corpus."
 edition = "2018"
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+license-file = "LICENSE.md"
+readme = "README.md"
+homepage = "https://github.com/sebpuetz/corpus-count"
+repository = "https://github.com/sebpuetz/corpus-count"
+exclude = [
+  ".gitignore",
+]
+keywords = ["corpus", "count", "ngrams", "n-grams"]
 
 [dependencies]
 clap = "2.33"
